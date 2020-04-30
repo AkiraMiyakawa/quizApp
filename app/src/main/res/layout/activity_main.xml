@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/quizOne"
+            style="@style/quizStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quizOne"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/quizOne_inputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/quizOne" />
+
+        <TextView
+            android:id="@+id/quizTwo"
+            style="@style/quizStyle"
+            android:paddingTop="32dp"
+            android:text="@string/quizTwo"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/quizOne_inputText" />
+
+        <EditText
+            android:id="@+id/quizTwo_inputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="hint: starts from I"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/quizTwo" />
+
+        <TextView
+            android:id="@+id/quizThree"
+            style="@style/quizStyle"
+            android:paddingTop="32dp"
+            android:text="@string/quizThree"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/quizTwo_inputText" />
+
+        <CheckBox
+            android:id="@+id/quizThree_CheckBoxOne"
+            style="@style/checkBoxStyle"
+            android:paddingStart="24dp"
+            android:paddingLeft="24dp"
+            android:text="@string/quizThree_CheckBoxOne_Text"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/quizThree" />
+
+        <CheckBox
+            android:id="@+id/quizThree_CheckBoxTwo"
+            style="@style/checkBoxStyle"
+            android:paddingStart="24dp"
+            android:paddingLeft="24dp"
+            android:text="@string/quizThree_CheckBoxTwo_Text"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/quizThree_CheckBoxOne" />
+
+        <CheckBox
+            android:id="@+id/quizThree_CheckBoxThree"
+            style="@style/checkBoxStyle"
+            android:paddingStart="24dp"
+            android:paddingLeft="24dp"
+            android:text="@string/quizThree_CheckBoxThree_Text"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/quizThree_CheckBoxTwo" />
+
+        <CheckBox
+            android:id="@+id/quizThree_CheckBoxFour"
+            style="@style/checkBoxStyle"
+            android:paddingStart="24dp"
+            android:paddingLeft="24dp"
+            android:text="@string/quizThree_CheckBoxFour_Text"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/quizThree_CheckBoxThree" />
+
+
+        <TextView
+            android:id="@+id/quizFour"
+            style="@style/quizStyle"
+            android:paddingTop="16dp"
+            android:text="@string/quizFour"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/quizThree_CheckBoxFour" />
+
+        <RadioGroup
+            android:id="@+id/quizFourRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/quizFour">
+
+            <RadioButton
+                android:id="@+id/quizFour_radio1"
+                style="@style/checkBoxStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:text="@string/quizFour_radio1"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/quizFour_radio2"
+                style="@style/checkBoxStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:text="@string/quizFour_radio2"
+
+                android:textSize="20dp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/order_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="checkAnswer"
+            android:text="@string/checkAnswer"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/quizFourRadioGroup" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="8dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
